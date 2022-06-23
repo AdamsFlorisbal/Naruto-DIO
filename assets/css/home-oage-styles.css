@@ -131,6 +131,7 @@ body::before {
 
 .n-card--hovered .n-card__image{
     transform: scale(1.4);
+    filter: drop-shadow(30px 10px 4px rgba(0,0,0, .5));
 }
 
 body#naruto-child-hovered::before{
