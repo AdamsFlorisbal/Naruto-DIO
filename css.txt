@@ -1,0 +1,11 @@
+**BEM CSS bloco elemento modificador
+
+item de menu menu-iten
+modidifcadores pode ser ativo e inativo.
+
+**Reset css tira todas as formataçoes que o navegador aplica automaticamente;
+
+**Criar variaves cola "--" na frente do nome da variavel Ex: 
+:root {
+    --primary-color: #fff:
+}

@@ -1,0 +1,148 @@
+@import url(global.css);
+@import url(reset.css);
+
+body {
+    background-color: var(--primary-color);
+}
+
+body::before {
+    content: "";
+    background-image: url('../naruto/naruto-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.n-menu {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.n-menu__item {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 1.25rem;
+}
+
+.n-menu__icon {
+    width: 5.5rem;
+    margin: 0 1.25rem;
+    vertical-align: middle;
+}
+
+.n-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    perspective: 3000px;
+}
+
+.n-card {
+    border: 0.5rem solid white;
+    width: calc(100% / 3 - 8%);
+    height: 70vh;
+    position: relative;
+
+}
+
+.n-card__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.n-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    transition: 1s ease-in-out;
+}
+
+.n-card__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.n-controller {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    bottom: 1.5rem;
+    width: 100%;
+}
+
+.n-controller__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.n-controller__button:hover {
+    transform: scale(1.1);
+}
+
+.n-controller__button:nth-child(2) {
+    margin: 0 3.75rem;
+}
+
+.n-controller__line {
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+}
+
+/* Hover animation */
+
+.n-card--hovered .n-card__background {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.n-card--hovered .n-card__image{
+    transform: scale(1.4);
+}
+
+body#naruto-child-hovered::before{
+    background-image: url('/assets/naruto/bg-criança.jpeg');
+}
+body#naruto-adult-hovered::before{
+    background-image: url('/assets/naruto/bg-adulto.png');
+}
+body#naruto-teenager-hovered::before{
+    background-image: url('/assets/naruto/bg-adolecente.webp');
+}
+
+body[id^="naruto-"]::before{
+    opacity: 1;
+}
