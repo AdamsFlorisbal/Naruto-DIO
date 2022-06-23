@@ -147,3 +147,7 @@ body#naruto-teenager-hovered::before{
 body[id^="naruto-"]::before{
     opacity: 1;
 }
+
+body[id^="naruto-"] .n-card:not(.n-card--hovered){
+    filter: grayscale(100%);
+}
