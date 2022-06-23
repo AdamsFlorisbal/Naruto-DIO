@@ -50,6 +50,7 @@ body::before {
     width: calc(100% / 3 - 8%);
     height: 70vh;
     position: relative;
+    transition: filter .5s ease-in-out;
 
 }
 
@@ -77,6 +78,7 @@ body::before {
     position: absolute;
     width: 100%;
     bottom: 0;
+    transition: bottom 1s ease-in-out, filter 1s ease-in-out;
 
 }
 
@@ -151,3 +153,8 @@ body[id^="naruto-"]::before{
 body[id^="naruto-"] .n-card:not(.n-card--hovered){
     filter: grayscale(100%);
 }
+
+.n-card--hovered .n-card__title {
+    bottom: 50%;
+    filter: drop-shadow(8px 2px 1px rgba(0,0,0, .8));
+  }
