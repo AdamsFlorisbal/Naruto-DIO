@@ -1,6 +1,7 @@
 @import url(global.css);
 @import url(reset.css);
 @import url(component/_navigator.css);
+@import url(component/_pills.css);
 
 .n-wrapper {
     display: flex;
@@ -19,8 +20,7 @@
     padding-right: 50px;
     left: 0;
     top: 0;
-    z-index: 1;
-    background-color: black;
+    z-index: 1;    
   }
   
   .n-wrapper .n-main-content{
@@ -30,3 +30,70 @@
     position: relative;
     background-color: blue;
   }
+
+  .n-wrapper .n-main-content__top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .n-wrapper .n-main-content__bottom{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .n-wrapper .n-main-content .n-logo img{
+    margin-top: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  
+  .n-wrapper .n-main-content__top .n-description{
+    background-color: rgba(0,0,0,.7);
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .n-wrapper .n-main-content__top .n-description .n-description__text p{
+    color: white;
+    line-height: 120%;
+  }
+  
+  .n-wrapper .n-main-content__top .n-description .pills{
+    margin-bottom: 20px;
+  }
+  
+  .n-wrapper .n-main-content .n-links{
+    padding: 20px;
+    padding-left: 0;
+  }
+  
+  .n-wrapper .n-main-content .n-links ul{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .n-naruto-01-01 {
+    background-image: url('../images/spiderman-tobey/movie-01/background.png');
+    background-size:cover;
+  }
+  
+  .n-naruto-01-02 {
+    background-image: url('../images/spiderman-tobey/movie-02/background.png');
+    background-size: cover;
+  }
+  
+  .n-naruto-01-03 {
+    background-image: url('../images/spiderman-tobey/movie-03/background.png');
+    background-size: cover;
+  }
+
+  .n-menu__icon {
+    width: 5.5rem;
+    margin: 0 1.25rem;
+    vertical-align: middle;
+}

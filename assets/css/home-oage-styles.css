@@ -137,13 +137,13 @@ body::before {
 }
 
 body#naruto-child-hovered::before{
-    background-image: url('/assets/naruto/bg-criança.jpeg');
+    background-image: url('../naruto/bg-criança.jpeg');
 }
 body#naruto-adult-hovered::before{
-    background-image: url('/assets/naruto/bg-adulto.png');
+    background-image: url('../naruto/bg-adulto.png');
 }
 body#naruto-teenager-hovered::before{
-    background-image: url('/assets/naruto/bg-adolecente.webp');
+    background-image: url('../naruto/bg-adolecente.webp');
 }
 
 body[id^="naruto-"]::before{
