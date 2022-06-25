@@ -2,12 +2,20 @@
 @import url(reset.css);
 @import url(component/_navigator.css);
 @import url(component/_pills.css);
+@import url(component/_link-button.css);
+@import url(component/_gallery.css);
+@import url(https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css);
 
 .n-wrapper {
     display: flex;
     height: 100vh;
     flex-flow: row nowrap;
     background-color: brown;
+}
+
+.n-wrapper video{
+  position: fixed;
+  width: 100%;
 }
 
 .n-wrapper .n-left-column {
@@ -27,8 +35,7 @@
     height: 100%;
     width: 100%;
     padding-left: 130px;
-    position: relative;
-    background-color: blue;
+    position: relative;    
   }
 
   .n-wrapper .n-main-content__top {
