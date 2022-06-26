@@ -181,7 +181,7 @@ body[id^="naruto-"] .n-card:not(.n-card--hovered) {
     filter: drop-shadow(8px 2px 1px rgba(0, 0, 0, .8));
 }
 
-.n-card-carousel {
+.n-cards-carousel {
     display: flex;
     justify-content: center;
     width: calc(100vw / 3 - 10%);
