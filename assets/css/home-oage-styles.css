@@ -47,11 +47,23 @@ body::before {
 
 .n-card {
     border: 0.5rem solid white;
-    width: calc(100% / 3 - 8%);
+    width: 100%;
     height: 70vh;
-    position: relative;
+    position: absolute;
     transition: filter .5s ease-in-out;
 
+}
+
+.n-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50vw);
+}
+
+.n-card:nth-child(2) {
+    transform: rotateY(120deg) translateZ(50vw);
+}
+
+.n-card:nth-child(3) {
+    transform: rotateY(240deg) translateZ(50vw);
 }
 
 .n-card__background {
@@ -117,6 +129,13 @@ body::before {
     margin: 0 3.75rem;
 }
 
+.n-controller__button--active {
+    background-color: white;
+    color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    outline: 0.125rem solid white;
+}
+
 .n-controller__line {
     background-color: white;
     width: 50%;
@@ -131,30 +150,41 @@ body::before {
     opacity: 0;
 }
 
-.n-card--hovered .n-card__image{
+.n-card--hovered .n-card__image {
     transform: scale(1.4);
-    filter: drop-shadow(30px 10px 4px rgba(0,0,0, .5));
+    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
 }
 
-body#naruto-child-hovered::before{
+
+body#naruto-child-hovered::before {
     background-image: url('../naruto/bg-criança.jpeg');
 }
-body#naruto-adult-hovered::before{
+
+body#naruto-adult-hovered::before {
     background-image: url('../naruto/bg-adulto.png');
 }
-body#naruto-teenager-hovered::before{
+
+body#naruto-teenager-hovered::before {
     background-image: url('../naruto/bg-adolecente.webp');
 }
 
-body[id^="naruto-"]::before{
+body[id^="naruto-"]::before {
     opacity: 1;
 }
 
-body[id^="naruto-"] .n-card:not(.n-card--hovered){
+body[id^="naruto-"] .n-card:not(.n-card--hovered) {
     filter: grayscale(100%);
 }
 
 .n-card--hovered .n-card__title {
     bottom: 50%;
-    filter: drop-shadow(8px 2px 1px rgba(0,0,0, .8));
-  }
+    filter: drop-shadow(8px 2px 1px rgba(0, 0, 0, .8));
+}
+
+.n-card-carousel {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in;
+}

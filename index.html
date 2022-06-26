@@ -32,26 +32,28 @@
         </ul>
     </nav>
     <div class="n-container">
-        <a href="assets/Pages/naruto_criança.html" class="n-card" id="naruto-child">
-            <img class="n-card__background" src="assets/naruto/bg-criança.jpeg" alt="">
-            <img class="n-card__image " src="assets/naruto/criança.webp" alt="">
-            <h2 class="n-card__title">Naruto criança</h2>
-        </a>
-        <a href="assets/Pages/naruto_adulto.html" class="n-card" id="naruto-adult">
-            <img class="n-card__background" src="assets/naruto/bg-adulto.png" alt="">
-            <img class="n-card__image " src="assets/naruto/adulto.png" alt="">
-            <h2 class="n-card__title">Naruto adulto</h2>
-        </a>
-        <a href="assets/Pages/naruto_adolecente.html" class="n-card" id="naruto-teenager">
-            <img class="n-card__background" src="assets/naruto/bg-adolecente.webp" alt="">
-            <img class="n-card__image " src="assets/naruto/adolecente.png" alt="">
-            <h2 class="n-card__title">Naruto adolecente</h2>
-        </a>
+        <div class="n-card-carousel" style="transform: translateZ(-50vw) rotateY(0deg)">
+            <a href="assets/Pages/naruto_criança.html" class="n-card" id="naruto-child">
+                <img class="n-card__background" src="assets/naruto/bg-criança.jpeg" alt="">
+                <img class="n-card__image " src="assets/naruto/criança.webp" alt="">
+                <h2 class="n-card__title">Naruto criança</h2>
+            </a>
+            <a href="assets/Pages/naruto_adulto.html" class="n-card" id="naruto-adult">
+                <img class="n-card__background" src="assets/naruto/bg-adulto.png" alt="">
+                <img class="n-card__image " src="assets/naruto/adulto.png" alt="">
+                <h2 class="n-card__title">Naruto adulto</h2>
+            </a>
+            <a href="assets/Pages/naruto_adolecente.html" class="n-card" id="naruto-teenager">
+                <img class="n-card__background" src="assets/naruto/bg-adolecente.webp" alt="">
+                <img class="n-card__image " src="assets/naruto/adolecente.png" alt="">
+                <h2 class="n-card__title">Naruto adolecente</h2>
+            </a>
+        </div>
     </div>
     <div class="n-controller">
-        <div class="n-controller__button">01</div>
-        <div class="n-controller__button">02</div> 
-        <div class="n-controller__button">03</div>
+        <div id="1" onclick="selectCarousrlItem(this)" class="n-controller__button n-controller__button--active ">01</div>
+        <div id="2" onclick="selectCarousrlItem(this)" class="n-controller__button ">02</div> 
+        <div id="3" onclick="selectCarousrlItem(this)" class="n-controller__button ">03</div>
         <div class="n-controller__line"></div>        
     </div>
 

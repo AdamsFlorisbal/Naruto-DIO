@@ -21,3 +21,7 @@ function addEventListenersToCards(){
 }
 
 document.addEventListener("DOMContentLoaded", addEventListenersToCards, false)
+
+function selectCarousrlItem(selectedItem){
+    console.log(selectedItem)
+}
